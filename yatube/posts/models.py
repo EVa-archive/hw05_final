@@ -35,7 +35,7 @@ class Post(models.Model):
         blank=True,
         null=True,
         verbose_name='Группа',
-        help_text='Группа, к которой будет относиться'
+        help_text='Группа, к которой будет относиться пост'
     )
     image = models.ImageField(
         'Картинка',
@@ -98,10 +98,3 @@ class Follow(models.Model):
         related_name='following',
         verbose_name='Автор'
     )
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['follower', 'following'], name='subscription_unique'
-            ),
-        ]
