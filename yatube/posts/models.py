@@ -35,7 +35,7 @@ class Post(models.Model):
         blank=True,
         null=True,
         verbose_name='Группа',
-        help_text='Группа, к которой будет относиться пост'
+        help_text='Группа, к которой будет относиться'
     )
     image = models.ImageField(
         'Картинка',
